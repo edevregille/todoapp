@@ -10,9 +10,19 @@ k8s Logs
 
 ```kubectl create -f k8s-mongo-service.yml```
 
+## Optional - Add New Relic Browser (incl. DT)
+Add your Browser agent into the html page (`/public/index.html`) with copy/paste. 
+Make sure that the DT feature is enabled for Browser.
+Need to build the docker image and push it to your docker hub
+
+```docker build -t DOCKER_IMAGE_NAME .
+docker push DOCKER_IMAGE_NAME
+```
 
 ## Deploy the todoapp service
-Replace the NEW_RELIC_LICENSE_KEY in k8s-todoapp-service.yml file with your New Relic License Key and then deploy
+Replace the NEW_RELIC_LICENSE_KEY in `k8s-todoapp-service.yml` file with your New Relic License Key.
+If you have added Browser agent, then modify the image name in the `k8s-todoapp-service.yml` with your own image name.
+Then, deploy:
 
 ```kubectl create -f k8s-todoapp-service.yml```
 
