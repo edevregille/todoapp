@@ -1,8 +1,9 @@
-# Deploy the app on Kubernetes
 
 ## NewRelic Infrastructure and Logs
 NRI agent deployed as a DaemonSet
+
 K8s Events 
+
 k8s Logs
 
 ## Deploy Mongo DB service
